@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jhoel Maqui">
+    <meta name="description" content="Recuperar contraseña">
+    <meta name="keywords" content="Reserva hotel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/hotel.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <title>Administrar Hoteles</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+
+                        <li class="nav-item">
+                            <a href="usuarios.html" class="nav-link align-middle px-0" id="user-link"
+                                data-toggle="modal" data-target="#userModal">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Usuarios del
+                                    sistema</span>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="servicios.html" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-gear"></i> <span class="ms-1 d-none d-sm-inline">Servicios</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="hotel.html" class="nav-link align-middle px-0" id="user-link" data-toggle="modal"
+                                data-target="#userModal">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Hoteles</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                    <hr>
+
+                </div>
+            </div>
+            <div id="content-container" class="col py-3">
+                <div class="container">
+                    <h1>Administrar usuarios</h1>
+
+                    <!-- Barra de búsqueda -->
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Buscar">
+                    </div>
+
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr class="text-center">
+                                <th>#</th>
+                                <th>DNI</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+
+                                <th>Correo</th>
+                                <th>Telefono</th>
+                                <th>Rango</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usuariosTabla">
+                            <!-- Filas de usuarios -->
+                            <td>1</td>
+                            <td>12345678</td>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>johndoe@example.com</td>
+                            <td>1234567890</td>
+                            <td>Recepcionista</td>
+                            <td>
+                                <button class="btn btn-danger">Eliminar</button>
+                                <button class="btn btn-primary">Editar</button>
+                            </td>
+                        </tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>87654321</td>
+                            <td>Jane</td>
+                            <td>Smith</td>
+                            <td>janesmith@example.com</td>
+                            <td>9876543210</td>
+                            <td>User</td>
+                            <td>
+                                <button class="btn btn-danger">Eliminar</button>
+                                <button class="btn btn-primary">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>98545558</td>
+                            <td>Jane</td>
+                            <td>car</td>
+                            <td>janesmith@example.com</td>
+                            <td>9876543210</td>
+                            <td>User</td>
+                            <td>
+                                <button class="btn btn-danger">Eliminar</button>
+                                <button class="btn btn-primary">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4555745</td>
+                            <td>Jane</td>
+                            <td>luis</td>
+                            <td>janesmith@example.com</td>
+                            <td>9876543210</td>
+                            <td>Recepcionista</td>
+                            <td>
+                                <button class="btn btn-danger">Eliminar</button>
+                                <button class="btn btn-primary">Editar</button>
+                            </td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <td colspan="8">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#agregarUsuarioModal">Agregar Nuevo Usuario</button>
+                                            </div>
+                                            <div class="col text-center">
+                                                <button class="btn btn-success" data-bs-toggle="modal">Guardar
+                                                    cambios</button>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+
+                <!-- Modal Agregar Usuario -->
+                <div class="modal fade" id="agregarUsuarioModal" tabindex="-1"
+                    aria-labelledby="agregarUsuarioModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="agregarUsuarioModalLabel">Agregar Nuevo Usuario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="idInput" class="form-label">DNI</label>
+                                        <input type="text" class="form-control" id="idInput"
+                                            placeholder="Ingrese el DNI">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nombreInput" class="form-label">Nombre de Usuario</label>
+                                        <input type="text" class="form-control" id="nombreInput"
+                                            placeholder="Ingrese el nombre de usuario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="apellidoInput" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" id="apellidoInput"
+                                            placeholder="Ingrese el apellido de usuario">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="correoInput" class="form-label">Correo</label>
+                                        <input type="text" class="form-control" id="correoInput" placeholder="@gmail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefonoInput" class="form-label">telefono</label>
+                                        <input type="text" class="form-control" id="telefonoInput" placeholder="+51">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="rangoInput" class="form-label">Rango</label>
+                                        <select class="form-select" id="rangoInput">
+                                            <option value="administrador">Administrador</option>
+                                            <option value="recepcionista">Recepcionista</option>
+                                        </select>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary"
+                                    onclick="agregarUsuario()">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Eliminar Usuario -->
+                <div class="modal fade" id="eliminarUsuarioModal" tabindex="-1"
+                    aria-labelledby="eliminarUsuarioModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="eliminarUsuarioModalLabel">Eliminar Usuario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger"
+                                    id="confirmarEliminarUsuario">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Editar Usuario -->
+                <div class="modal fade" id="editarUsuarioModal" tabindex="-1" aria-labelledby="editarUsuarioModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editarUsuarioModalLabel">Editar Usuario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="editarIdInput" class="form-label">DNI</label>
+                                        <input type="text" class="form-control" id="editarIdInput"
+                                            placeholder="Ingrese el DNI">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editarNombreInput" class="form-label">Nombre de Usuario</label>
+                                        <input type="text" class="form-control" id="editarNombreInput"
+                                            placeholder="Ingrese el nombre de usuario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editarApellidoInput" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" id="editarApellidoInput"
+                                            placeholder="Ingrese el apellido de usuario">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="editarCorreoInput" class="form-label">Correo</label>
+                                        <input type="text" class="form-control" id="editarCorreoInput"
+                                            placeholder="@gmail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editarTelefonoInput" class="form-label">Teléfono</label>
+                                        <input type="text" class="form-control" id="editarTelefonoInput"
+                                            placeholder="+51">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editarRangoInput" class="form-label">Rango</label>
+                                        <select class="form-select" id="editarRangoInput">
+                                            <option value="administrador">Administrador</option>
+                                            <option value="recepcionista">Recepcionista</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary"
+                                    id="confirmarEditarUsuario">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+
+                    // Función para eliminar un usuario
+                    function eliminarUsuario(botonEliminar) {
+                        var fila = botonEliminar.closest("tr"); // Obtener la fila a la que pertenece el botón
+                        var modal = new bootstrap.Modal(document.getElementById("eliminarUsuarioModal")); // Crear instancia del modal
+
+                        document.getElementById("confirmarEliminarUsuario").addEventListener("click", function () {
+                            fila.remove(); // Eliminar la fila de la tabla
+                            modal.hide(); // Ocultar el modal de eliminación
+                        });
+
+                        modal.show(); // Mostrar el modal de eliminación
+                    }
+
+                    // Función para editar un usuario
+                    function editarUsuario(botonEditar) {
+                        var fila = botonEditar.closest("tr");
+                        var idUsuario = fila.cells[1].textContent;
+                        var nombreUsuario = fila.cells[2].textContent;
+                        var apellidoUsuario = fila.cells[3].textContent;
+                        var correoUsuario = fila.cells[4].textContent;
+                        var telefonoUsuario = fila.cells[5].textContent;
+                        var rangoUsuario = fila.cells[6].textContent;
+
+                        var modal = new bootstrap.Modal(document.getElementById("editarUsuarioModal"));
+
+                        document.getElementById("confirmarEditarUsuario").addEventListener("click", function () {
+                            var nuevoId = document.getElementById("editarIdInput").value;
+                            var nuevoNombre = document.getElementById("editarNombreInput").value;
+                            var nuevoApellido = document.getElementById("editarApellidoInput").value;
+                            var nuevoCorreo = document.getElementById("editarCorreoInput").value;
+                            var nuevoTelefono = document.getElementById("editarTelefonoInput").value;
+                            var nuevoRango = document.getElementById("editarRangoInput").value;
+
+                            fila.cells[1].textContent = nuevoId;
+                            fila.cells[2].textContent = nuevoNombre;
+                            fila.cells[3].textContent = nuevoApellido;
+                            fila.cells[4].textContent = nuevoCorreo;
+                            fila.cells[5].textContent = nuevoTelefono;
+                            fila.cells[6].textContent = nuevoRango;
+
+
+                            modal.hide();
+                        });
+                        document.getElementById("editarIdInput").value = idUsuario;
+                        document.getElementById("editarNombreInput").value = nombreUsuario;
+                        document.getElementById("editarApellidoInput").value = apellidoUsuario;
+                        document.getElementById("editarCorreoInput").value = correoUsuario;
+                        document.getElementById("editarTelefonoInput").value = telefonoUsuario;
+                        document.getElementById("editarRangoInput").value = rangoUsuario;
+
+                        modal.show();
+                    }
+
+                </script>
+
+
+                <script>
+                    var contadorUsuarios = 5; // Contador para asignar números de usuario
+
+                    function agregarUsuario() {
+                        // Obtener los valores ingresados en el formulario
+                        var id = document.getElementById("idInput").value;
+                        var nombre = document.getElementById("nombreInput").value;
+                        var apellido = document.getElementById("apellidoInput").value;
+
+                        var correo = document.getElementById("correoInput").value;
+                        var telefono = document.getElementById("telefonoInput").value;
+                        var rango = document.getElementById("rangoInput").value;
+
+                        // Crear una nueva fila para el usuario
+                        var nuevaFila = document.createElement("tr");
+                        var numeroCelda = document.createElement("td");
+                        var idCelda = document.createElement("td");
+                        var nombreCelda = document.createElement("td");
+                        var apellidoCelda = document.createElement("td");
+                        var correoCelda = document.createElement("td");
+                        var telefonoCelda = document.createElement("td");
+
+                        var rangoCelda = document.createElement("td");
+                        var accionesCelda = document.createElement("td");
+
+                        // Configurar el contenido de las celdas
+                        numeroCelda.textContent = ++contadorUsuarios; // Incrementar el contador y asignar el número de usuario
+                        idCelda.textContent = id;
+                        nombreCelda.textContent = nombre;
+                        apellidoCelda.textContent = apellido;
+                        correoCelda.textContent = correo;
+                        telefonoCelda.textContent = telefono;
+
+                        rangoCelda.textContent = rango;
+                        accionesCelda.innerHTML =
+                            '<button class="btn btn-sm btn-primary" onclick="editarUsuario(this)">Modificar</button> ' +
+                            '<button class="btn btn-sm btn-danger" onclick="eliminarUsuario(this)">Eliminar</button>';
+
+                        // Agregar las celdas a la nueva fila
+                        nuevaFila.appendChild(numeroCelda);
+                        nuevaFila.appendChild(idCelda);
+                        nuevaFila.appendChild(nombreCelda);
+                        nuevaFila.appendChild(apellidoCelda);
+                        nuevaFila.appendChild(correoCelda);
+                        nuevaFila.appendChild(telefonoCelda);
+
+                        nuevaFila.appendChild(rangoCelda);
+                        nuevaFila.appendChild(accionesCelda);
+
+                        // Agregar la nueva fila a la tabla
+                        document.getElementById("usuariosTabla").appendChild(nuevaFila);
+
+                        // Limpiar los campos del formulario
+                        document.getElementById("idInput").value = "";
+                        document.getElementById("nombreInput").value = "";
+                        document.getElementById("apellidoInput").value = "";
+                        document.getElementById("correoInput").value = "";
+                        document.getElementById("telefonoInput").value = "";
+
+                        document.getElementById("rangoInput").value = "";
+
+                        // Cerrar el modal de "Agregar Usuario"
+                        var modal = bootstrap.Modal.getInstance(document.getElementById("agregarUsuarioModal"));
+                        modal.hide();
+                    }
+
+
+                </script>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

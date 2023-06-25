@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jhoel Maqui">
+  <meta name="description" content="Recuperar contraseña">
+  <meta name="keywords" content="Reserva hotel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href=".css">
+  <link rel="icon" type="image/x-icon" href="img/hotel.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap"
+    rel="stylesheet">
+  <title>Principal Recepcionista</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+          <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <span class="fs-5 d-none d-sm-inline">Menu</span>
+          </a>
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            <li class="nav-item">
+              <a
+                href="Check-in.html"
+                class="nav-link align-middle px-0"
+                id="user-link"
+                data-toggle="modal"
+                data-target="#userModal">
+                <i class="fs-4 bi-people"></i>
+                <span class="ms-1 d-none d-sm-inline">Check-in</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Check-out.html" class="nav-link px-0 align-middle">
+                <i class="fs-4 bi-gear"></i>
+                <span class="ms-1 d-none d-sm-inline">Check-out</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="gestServicios.html"
+                class="nav-link align-middle px-0"
+                id="user-link"
+                data-toggle="modal"
+                data-target="#userModal">
+                <i class="fs-4 bi-people"></i>
+                <span class="ms-1 d-none d-sm-inline">Gestionar servicios adicionales</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="adHabitaciones.html"
+                class="nav-link align-middle px-0"
+                id="user-link"
+                data-toggle="modal"
+                data-target="#userModal">
+                <i class="fs-4 bi-people"></i>
+                <span class="ms-1 d-none d-sm-inline">Administrar habitaciones</span>
+              </a>
+            </li>
+          </ul>
+          <hr>
+        </div>
+      </div>
+      <div id="content-container" class="col py-3">
+        <h2 class="text-center">Gestion de servicios adicionales</h2>
+        <div class="container">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Servicios</th>
+                <th scope="col">Modificar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cliente 1</td>
+                <td>DNI 12345678</td>
+                <td>
+                  <span>Servicio 1</span>
+                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
+                  <br>
+                  <span>Servicio 2</span>
+                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
+                  <br>
+                  <span>Servicio 3</span>
+                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
+                </td>
+                <td>
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#editServiceModal"
+                    data-service-id="1">Modificar</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Cliente 2</td>
+                <td>DNI 87654321</td>
+                <td>
+                  <span>Servicio 1</span>
+                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
+                  <br>
+                  <span>Servicio 2</span>
+                  <button class="btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
+                </td>
+                <td>
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#editServiceModal"
+                    data-service-id="2">Modificar</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Cliente 3</td>
+                <td>DNI 87654321</td>
+                <td>
+                  <span>Servicio 1</span>
+                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
+                  <br>
+                  <span>Servicio 2</span>
+                  <button class="btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
+                </td>
+                <td>
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#editServiceModal"
+                    data-service-id="3">Modificar</button>
+                </td>
+              </tr>
+              <!-- Agrega más filas según sea necesario -->
+            </tbody>
+          </table>
+          
+        </div>
+        <button type="button" class="col-12 btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ventana modal para editar servicio -->
+  <div class="modal fade" id="editServiceModal" tabindex="-1" role="dialog" aria-labelledby="editServiceModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editServiceModalLabel">Editar Servicio</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="serviceName">Nombre del servicio</label>
+              <input type="text" class="form-control" id="serviceName">
+            </div>
+            <div class="form-group">
+              <label for="serviceDescription">Descripción</label>
+              <textarea class="form-control" id="serviceDescription" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script>
+    // Obtener el botón "Modificar" y el campo "Nombre del servicio" del modal
+    var editServiceButtons = document.querySelectorAll('button[data-target="#editServiceModal"]');
+    var serviceNameField = document.getElementById('serviceName');
+
+    // Agregar un evento click a cada botón "Modificar" para actualizar el campo "Nombre del servicio" con el texto correspondiente
+    editServiceButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var serviceId = button.getAttribute('data-service-id');
+        var serviceSpan = document.querySelector('tr[data-service-id="' + serviceId + '"] span');
+        var serviceName = serviceSpan.textContent;
+        serviceNameField.value = serviceName;
+      });
+    });
+  </script>
+</body>
+
+</html>

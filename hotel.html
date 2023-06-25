@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jhoel Maqui">
+    <meta name="description" content="Recuperar contraseña">
+    <meta name="keywords" content="Reserva hotel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/hotel.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <title>Administrar hotel</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                       
+                        <li class="nav-item">
+                            <a href="usuarios.html" class="nav-link align-middle px-0" id="user-link"
+                                data-toggle="modal" data-target="#userModal">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Usuarios del
+                                    sistema</span>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="servicios.html" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-gear"></i> <span class="ms-1 d-none d-sm-inline">Servicios</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="hotel.html" class="nav-link align-middle px-0" id="user-link" data-toggle="modal"
+                                data-target="#userModal">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Hoteles</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                    <hr>
+
+                </div>
+            </div>
+            <div id="content-container" class="col py-3">
+                <div class="container">
+                    <h1>Administrar hoteles</h1>
+
+                    <!-- Barra de búsqueda -->
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Buscar">
+                    </div>
+
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Descripción</th>
+                                <th>Nombre</th>
+                                <th>Dirección</th>
+                                <th>Teléfono</th>
+                                <th>Correo</th>
+                                <th>Estrellas</th>
+                                <th>Precio</th>
+                                <th>N° Habitaciones</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Descripción 1</td>
+                                <td>Nombre Hotel 1</td>
+                                <td>Dirección 1</td>
+                                <td>Teléfono 1</td>
+                                <td>Correo 1</td>
+                                <td>5</td>
+                                <td>$100</td>
+                                <td>10</td>
+                                <td>Disponible</td>
+                                <td>
+                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil"></i> Editar
+                                    </button>
+                                    <button type="button" class=" mb-1 col-8 btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Descripción 2</td>
+                                <td>Nombre Hotel 2</td>
+                                <td>Dirección 2</td>
+                                <td>Teléfono 2</td>
+                                <td>Correo 2</td>
+                                <td>4</td>
+                                <td>$80</td>
+                                <td>20</td>
+                                <td>Disponible</td>
+                                <td>
+                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil"></i> Editar
+                                    </button>
+                                    <button type="button" class="mb-1 col-8 btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Descripción 2</td>
+                                <td>Nombre Hotel 2</td>
+                                <td>Dirección 2</td>
+                                <td>Teléfono 2</td>
+                                <td>Correo 2</td>
+                                <td>4</td>
+                                <td>$80</td>
+                                <td>20</td>
+                                <td>Disponible</td>
+                                <td>
+                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil"></i> Editar
+                                    </button>
+                                    <button type="button" class="mb-1 col-8 btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Descripción 2</td>
+                                <td>Nombre Hotel 2</td>
+                                <td>Dirección 2</td>
+                                <td>Teléfono 2</td>
+                                <td>Correo 2</td>
+                                <td>4</td>
+                                <td>$80</td>
+                                <td>20</td>
+                                <td>Disponible</td>
+                                <td>
+                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil"></i> Editar
+                                    </button>
+                                    <button type="button" class="mb-1 col-8 btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Descripción 2</td>
+                                <td>Nombre Hotel 2</td>
+                                <td>Dirección 2</td>
+                                <td>Teléfono 2</td>
+                                <td>Correo 2</td>
+                                <td>4</td>
+                                <td>$80</td>
+                                <td>20</td>
+                                <td>Disponible</td>
+                                <td>
+                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
+                                        <i class="bi bi-pencil"></i> Editar
+                                    </button>
+                                    <button type="button" class="mb-1 col-8 btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Agrega más filas según sea necesario -->
+                        </tbody>
+                    </table>
+                    </table>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#agregarHotelModal">Agregar Nuevo Hotel</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </div>
+
+                <!-- Modal Agregar hotel -->
+                <div class="modal fade" id="agregarHotelModal" tabindex="-1" aria-labelledby="agregarHotelModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="agregarHotelModalLabel">Agregar Nuevo Usuario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <form action="modificarHotel.php" method="POST" class="p-4">
+                                        <div class="mb-3 row">
+                                            <label for="nombre" class="col-sm-3 col-form-label">Nombre</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del hotel" required>
+                                            </div>
+                                        </div>                        
+                                        <div class="mb-3 row align-items-center">
+                                            <label for="direccion" class="col-sm-3 col-form-label">Dirección</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección del hotel" required>
+                                            </div>
+                                        </div>                        
+                                        <div class="mb-3 row align-items-center">
+                                            <label for="telefono" class="col-sm-3 col-form-label">Teléfono</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="12345-6789" pattern="[0-9]{5}-[0-9]{4}" required>
+                                                </div>
+                                            </div>
+                                        </div>                                              
+                                        <div class="mb-3 row align-items-center">
+                                            <label for="correo" class="col-sm-3 col-form-label">Correo</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@dominio.com" required>
+                                                </div>
+                                            </div>
+                                        </div>                        
+                                        <div class="mb-3 row align-items-center">
+                                            <label for="estrellas" class="col-sm-3 col-form-label">Estrellas</label>
+                                            <div class="col-sm-9">
+                                                <input type="number" class="form-control" id="estrellas" name="estrellas" placeholder="Estrellas del hotel" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row align-items-start">
+                                            <label for="descripcion" class="col-sm-3 col-form-label">Descripción</label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Descripción del hotel" required></textarea>
+                                            </div>
+                                        </div>                        
+                                        <div class="mb-3 row align-items-center">
+                                            <label for="precio" class="col-sm-3 col-form-label">Precio por noche</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="precio" name="precio" placeholder="Precio por noche" required>
+                                                    <span class="input-group-text">PEN</span>
+                                                </div>
+                                            </div>
+                                        </div>                        
+                                        <div class="mb-3 row align-items-center">
+                                            <label for="habitaciones" class="col-sm-3 col-form-label">Cantidad de habitaciones</label>
+                                            <div class="col-sm-9">
+                                                <input type="number" class="form-control" id="habitaciones" name="habitaciones" placeholder="Cantidad de habitaciones" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row align-items-center">
+                                            <label for="imagen" class="col-sm-3 col-form-label">Imagen</label>
+                                            <div class="col-sm-9">
+                                                <input type="file" class="form-control" id="imagen" name="imagen" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row align-items-start">
+                                            <label for="ubicacion" class="col-sm-3 col-form-label">Ubicación</label>
+                                            <div class="col-sm-9">
+                                                <div class="mapa-contenido">
+                                                    <div class="embed-responsive embed-responsive-16by9">
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1660.663668656303!2d-79.0326063717926!3d-8.127311979758224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d6fc00e11a5%3A0xef538e1047aa1c9d!2sUniversidad%20Privada%20Antenor%20Orrego%2C%20Trujillo%2013008!5e0!3m2!1ses-419!2spe!4v1683423798228!5m2!1ses-419!2spe" 
+                                                        class="embed-responsive-item" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                        
+                                        <div class="d-flex justify-content-center mt-3">
+                                            <button class="btn btn-danger me-5" type="button">Guardar cambios</button>
+                                            <button class="btn btn-secondary" type="button">Cancelar</button>
+                                        </div>
+                                    </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Eliminar Usuario -->
+                <div class="modal fade" id="eliminarUsuarioModal" tabindex="-1"
+                    aria-labelledby="eliminarUsuarioModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="eliminarUsuarioModalLabel">Eliminar Usuario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger"
+                                    id="confirmarEliminarUsuario">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Editar Usuario -->
+                <div class="modal fade" id="editarHotelModal" tabindex="-1" aria-labelledby="editarHotelModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editarHotelModalLabel">Editar Usuario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="editarNombreInput" class="form-label">Nombre de hotel</label>
+                                        <input type="text" class="form-control" id="editarNombreInput"
+                                            placeholder="Ingrese el nombre de Hotel">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editarUbicacionInput" class="form-label">Ubicacion</label>
+                                        <input type="text" class="form-control" id="editarUbicacionInput"
+                                            placeholder="Ubicacion">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editarCantidadInput" class="form-label">Cantidad de
+                                            habitaciones</label>
+                                            <div class="mb-3">
+                                                <label for="editarCantidadInput" class="form-label">Ubicacion</label>
+                                                <input type="text" class="form-control" id="editarCantidadInput"
+                                                    placeholder="Cantidad">
+                                            </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editarEstadoInput" class="form-label">Estado</label>
+                                        <select class="form-control" id="editarEstadoInput">
+                                            <option value="Activo">Activo</option>
+                                            <option value="Inactivo">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary" id="confirmarEditarHotel">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
