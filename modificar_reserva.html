@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Jhoel Maqui">
+        <meta name="copyright" content="Jhoel Maqui"/>
+        <meta name="description" content="Modificar Reserva">
+        <meta name="keywords" content="Reserva hotel">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="icon" type="image/x-icon" href="img/logohotel.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+        <title>Reservas</title>
+    </head>
+<body>
+
+</head>
+<body>
+    <div class="pablo container-fluid bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">
+                <img src="img/logohotel.png" alt="Bootstrap" width="40" height="33">
+                Hotel Malabrigo
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-nav ml-auto">
+                  <a class="nav-link" href="modificar_reserva.html">Reservas</a>
+                  <a class="nav-link" href="registraAlojamiento.html">Registra tu alojamiento</a>
+                  <a class="nav-link" href="registrarsesion.html">Hazte una cuenta</a>
+                  <a class="nav-link" href="login.html">Iniciar sesión</a>
+              </div>
+            </div>
+        </nav>
+      <div class="container mt-4 bg-primary h-100">
+          <div class="row">
+              <div class="col">
+                  <h2 class="fw-bold text-white">Aca se mostrarán tus reservas</h2>
+              </div>
+          </div>
+      </div> 
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <h2 class="text-center">Tus reservas</h2>
+        <div class="col">
+          <div class="container">
+                
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Cliente</th>
+                        <th>Habitación</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Carlos</td>
+                        <td>Habitación 101</td>
+                        <td><button class="btn btn-primary btn-sm estado-btn" data-reserva="1">Realizada</button></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tú</td>
+                        <td>Habitación 102</td>
+                        <td>Hospedada</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tú</td>
+                        <td>Habitación 103</td>
+                        <td>Hospedada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+  
+          <div class="container mt-2 mb-4">
+            <div class="row">
+              <div class="col">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div id="formularioReserva" style="display: none;">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col">
+                          <form>
+                            <div class="container">
+                              <div class="row mb-3">
+                                <h2>Modificar reserva</h2>
+                                <div class="col">
+                                  <label for="nombre" class="form-label">Nombre:</label>
+                                  <input type="text" class="form-control" id="nombre" name="nombre" value="Jorge" readonly>
+                                </div>
+                                <div class="col">
+                                  <label for="apellido" class="form-label">Apellido:</label>
+                                  <input type="text" class="form-control" id="apellido" name="apellido" value="Castillo" readonly>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          
+                            <div class="container mb-3">
+                              <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                  <label for="docType" class="form-label">Tipo de Documento:</label>
+                                  <select class="form-select" id="docType" name="docType" disabled>
+                                    <option value="dni" selected>DNI</option>
+                                    <option value="passport">Pasaporte</option>
+                                    <option value="other">Otro</option>
+                                  </select>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                  <label for="docNumber" class="form-label">Número de Documento:</label>
+                                  <input type="text" class="form-control" id="docNumber" name="docNumber" value="70685425" readonly>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="mb-3">
+                                  <label for="telefono" class="form-label">Teléfono:</label>
+                                  <input type="tel" class="form-control" id="telefono" name="telefono" value="992547586" readonly>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col">
+                                    <label class="form-label">¿Para quién es la reserva?</label>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="reservaType" id="reservaParaMi" value="paraMi" checked disabled>
+                                      <label class="form-check-label" for="reservaParaMi">
+                                        <h6 class="text-center">Para mí</h6>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="reservaType" id="reservaParaOtrasPersonas" value="paraOtrasPersonas" checked disabled>
+                                      <label class="form-check-label" for="reservaParaOtrasPersonas">
+                                        <h6 class="text-center">Para otras personas</h6>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="mb-3" id="nuevoElemento">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col">
+                                    <label for="nombreOtraPersona" class="form-label">Nombre de otra persona:</label>
+                                    <input type="text" class="form-control" id="nombreOtraPersona" name="nombreOtraPersona" value="Carlos" readonly>
+                                  </div>
+                                  <div class="col">
+                                    <label for="apellidoOtraPersona" class="form-label">Apellido de otra persona:</label>
+                                    <input type="text" class="form-control" id="apellidoOtraPersona" name="apellidoOtraPersona" value="Castillo" readonly>
+                                  </div>
+              
+                                </div>
+              
+                              </div>
+                              
+                            
+                              <div class="container ">
+                                <div class="row">
+                                  <div class="col-12 col-md-6">
+                                    <label for="docTypeOtraPersona" class="form-label">Tipo de Documento:</label>
+                                    <select class="form-select" id="docTypeOtraPersona" name="docTypeOtraPersona" disabled>
+                                      <option value="dni" selected>DNI</option>
+                                      <option value="passport">Pasaporte</option>
+                                      <option value="other">Otro</option>
+                                    </select>
+
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                                    <label for="docNumberOtraPersona" class="form-label">Número de Documento:</label>
+                                    <input type="text" class="form-control" id="docNumberOtraPersona" name="docNumberOtraPersona" value="78256894" readonly>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <label for="telefonoOtraPersona" class="form-label">Teléfono:</label>
+                                  <input type="tel" class="form-control" id="telefonoOtraPersona" name="telefonoOtraPersona" value="998554785" readonly>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="tipoHabitacion" class="form-label">Tipo de habitación:</label>
+                              <select id="tipoHabitacion" onchange="filtrarHabitaciones()">
+                                <option value="todas">...</option>
+                                <option value="individual">Individual</option>
+                                <option value="doble">Doble</option>
+                                <option value="familiar">Familiar</option>
+                              </select>
+                            </div>    
+                          
+                            <div class="container">
+                              <div class="row">
+                                <div class="col">
+                                  <div class="row mb-3">
+                                    <div class="col">
+                                      <label for="fechaReserva" class="form-label">Fecha de entrada</label>
+                                      <input type="date" class="form-control" id="fechaReserva" name="fechaReserva" value="2023-05-10" required>
+              
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="mb-3">
+                                    <label for="fechaEntrada" class="form-label">Fecha de salida</label>
+                                    <input type="date" class="form-control" id="fechaEntrada" name="fechaEntrada" value="2023-10-10" required>
+              
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                          </form>
+                        </div>
+
+                        <div class="col">
+                          <div class="col">
+                            <div class="container" id="habitacionesDisponibles">
+                              <h3 class="text-center">HABITACIONES DISPONIBLES</h3>
+                              <div class="row">
+                                <div class="col-md-4 mb-4 individual">
+                                  <div class="card available">
+                                    <i class="icon fas fa-check-circle"></i>
+                                    <img src="img/habitacion1.jpg" class="card-img-top" alt="Habitación 1">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Habitación #203</h5>
+                                      <p class="card-text">Cantidad de personas: 1</p>
+                                      <button class="btn btn-primary" onclick="mostrarDetalles('habitacion1')">Ver detalles</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mb-4 doble">
+                                  <div class="card available">
+                                    <i class="icon fas fa-check-circle"></i>
+                                    <img src="img/habitacion2.jpg" class="card-img-top" alt="Habitación 2">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Habitación #205</h5>
+                                      <p class="card-text">Cantidad de personas: 2</p>
+                                      <button class="btn btn-primary" onclick="mostrarDetalles('habitacion2')">Ver detalles</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mb-4 familiar">
+                                  <div class="card available">
+                                    <i class="icon fas fa-check-circle"></i>
+                                    <img src="img/habitacion3.jpg" class="card-img-top" alt="Habitación 3">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Habitación #206</h5>
+                                      <p class="card-text">Cantidad de personas: 4</p>
+                                      <button class="btn btn-primary" onclick="mostrarDetalles('habitacion3')">Ver detalles</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mb-4 doble">
+                                  <div class="card unavailable">
+                                    <i class="icon fas fa-times-circle"></i>
+                                    <img src="img/habitacion4.jpg" class="card-img-top" alt="Habitación 2">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Habitación #405</h5>
+                                      <p class="card-text">Cantidad de personas: 2</p>
+                                      <button class="btn btn-primary" onclick="mostrarDetalles('habitacion2')">Ver detalles</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mb-4 familiar">
+                                  <div class="card available">
+                                    <i class="icon fas fa-check-circle"></i>
+                                    <img src="img/habitacion5.jpg" class="card-img-top" alt="Habitación 3">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Habitación #407</h5>
+                                      <p class="card-text">Cantidad de personas: 4</p>
+                                      <button class="btn btn-primary" onclick="mostrarDetalles('habitacion3')">Ver detalles</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mb-4 individual">
+                                  <div class="card unavailable">
+                                    <i class="icon fas fa-times-circle"></i>
+                                    <img src="img/habitacion6.png" class="card-img-top" alt="Habitación 3">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Habitación #403</h5>
+                                      <p class="card-text">Cantidad de personas: 1</p>
+                                      <button class="btn btn-primary" onclick="mostrarDetalles('habitacion1')">Ver detalles</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div id="detallesHabitacion" style="display: none;">
+                                <h4>Detalles de la habitación</h4>
+                                <div class="detalles habitacion1" style="display: none;">
+                                  <p>Descripción: Habitación individual con vista al mar.</p>
+                                  <p>Servicios incluidos: Wi-Fi, TV por cable.</p>
+                                  <p>Tamaño: 20 metros cuadrados.</p>
+                                  <button type="button" class="btn btn-success">Escoger</button>
+                                </div>
+                                <div class="detalles habitacion2" style="display: none;">
+                                  <p>Descripción: Habitación doble con balcón.</p>
+                                  <p>Servicios incluidos: Desayuno buffet, acceso al gimnasio.</p>
+                                  <p>Tamaño: 30 metros cuadrados.</p>
+                                  <button type="button" class="btn btn-success">Escoger</button>
+                                </div>
+                                <div class="detalles habitacion3" style="display: none;">
+                                  <p>Descripción: Habitación familiar con cocina.</p>
+                                  <p>Servicios incluidos: Servicio de habitaciones las 24 horas, minibar.</p>
+                                  <p>Tamaño: 50 metros cuadrados.</p>
+                                  <button type="button" class="btn btn-success">Escoger</button>
+                                </div>
+                              </div>
+                          </div>  
+                  
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    
+        
+                  </div>
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+          <script>
+            // Mostrar u ocultar datos de otras personas
+            const reservaRadio = document.getElementsByName('reserva');
+            const datosOtrasPersonas = document.getElementById('datosOtrasPersonas');
+        
+            reservaRadio.forEach((radio) => {
+              radio.addEventListener('change', () => {
+                if (radio.value === 'paraOtrasPersonas') {
+                  datosOtrasPersonas.style.display = 'block';
+                } else {
+                  datosOtrasPersonas.style.display = 'none';
+                }
+              });
+            });
+      
+            // Mostrar u ocultar detalles de habitaciones
+            function mostrarDetalles(habitacionId) {
+              document.getElementById("detallesHabitacion").style.display = "block";
+              var detallesHabitacion = document.getElementsByClassName("detalles");
+              for (var i = 0; i < detallesHabitacion.length; i++) {
+                detallesHabitacion[i].style.display = "none";
+              }
+              document.getElementsByClassName(habitacionId)[0].style.display = "block";
+            }  
+            
+      
+            // Filtrar habitaciones
+            function filtrarHabitaciones() {
+              const tipoSeleccionado = document.getElementById('tipoHabitacion').value;
+              const habitaciones = document.getElementsByClassName('col-md-4');
+          
+              for (let i = 0; i < habitaciones.length; i++) {
+                habitaciones[i].style.display = 'none';
+              }
+          
+              if (tipoSeleccionado === 'todas') {
+                for (let i = 0; i < habitaciones.length; i++) {
+                  habitaciones[i].style.display = 'block';
+                }
+              } else {
+                const habitacionesFiltradas = document.getElementsByClassName(tipoSeleccionado);
+                for (let i = 0; i < habitacionesFiltradas.length; i++) {
+                  habitacionesFiltradas[i].style.display = 'block';
+                }
+              }
+            }
+      
+            // Filtrar habitaciones por ciudad
+            function filterByCity() {
+              const searchInput = document.getElementById('searchInput');
+              const searchTerm = searchInput.value.toLowerCase();
+              const cards = document.querySelectorAll('.card');
+          
+              cards.forEach(card => {
+                const city = card.getAttribute('data-city').toLowerCase();
+          
+                if (city === searchTerm || searchTerm === '') {
+                  card.style.display = 'block';
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+            }
+            
+          </script>
+
+  <style>
+    .nav-link.rounded {
+      transition: border 0.3s ease;
+  }
+  
+  .nav-link.rounded:focus,
+  .nav-link.rounded:hover {
+      border: 1px solid white;
+  }
+  
+  .dropdown-toggle::after {
+      display: none;
+  }
+  
+  .custom-border {
+      border: 5px solid yellow;
+      border-radius: 0;
+      padding: 0;
+  }
+  
+  body {
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+  }
+  
+  h1 {
+      color: #333; 
+      text-align: center; 
+      margin-top: 30px; 
+  }
+  
+  p {
+      color: #666; 
+      line-height: 1.5; 
+  }
+  
+  .button {
+      display: inline-block; 
+      padding: 10px 20px; 
+      background-color: #555; 
+      color: #fff; 
+      text-decoration: none; 
+      border-radius: 4px; 
+  }
+  
+  .button:hover {
+      background-color: #333; 
+  }
+  
+  .nav-link {
+      color: #fff; 
+      text-decoration: none; 
+      padding: 10px 15px; 
+      margin-right: 10px; 
+      border-radius: 4px; 
+  }
+  
+  .nav-link:hover {
+      background-color: #1c4be4; 
+  }
+  
+  .navbar {
+      
+      padding: 10px; 
+  }
+  
+  .logo {
+      color: #fff; 
+      font-size: 24px; 
+      font-weight: bold; 
+      text-decoration: none; 
+  }
+  
+  .button:hover {
+      background-color: #333; 
+  }
+  
+  .imagen {
+      height: 280px;
+      width: 100%;
+      transition: filter 0.3s ease;
+      object-fit: cover; 
+      border-radius: 4px; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .imagen:hover {
+      filter: brightness(70%); /* Reduce el brillo al 70% */
+  }
+  
+  .rectangulo {
+      background-color: #f8f9fa;
+      border: 2px solid #dee2e6;
+      border-radius: 5px;
+      padding: 10px;
+  }
+  
+  .custom-border {
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      padding: 10px;
+  }
+  
+  .form-control {
+      border-color: #ced4da;
+  }
+  
+  .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+  }
+  
+  .btn-primary:focus {
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  }
+  
+  .btn-primary:active {
+      background-color: #0062cc;
+      border-color: #005cbf;
+  }
+  </style>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var reservaParaMi = document.getElementById('reservaParaMi');
+        var reservaParaOtrasPersonas = document.getElementById('reservaParaOtrasPersonas');
+        var nuevoElemento = document.getElementById('nuevoElemento');
+
+        reservaParaMi.addEventListener('click', function () {
+          nuevoElemento.style.display = 'none';
+        });
+
+        reservaParaOtrasPersonas.addEventListener('click', function () {
+          nuevoElemento.style.display = 'block';
+        });
+      });
+
+      // Obtiene el contenedor del formulario
+      var formularioReserva = document.getElementById('formularioReserva');
+    
+      // Obtiene todos los botones con la clase "estado-btn"
+      var botonesEstado = document.getElementsByClassName('estado-btn');
+    
+      // Recorre los botones y agrega un evento de clic a cada uno
+      for (var i = 0; i < botonesEstado.length; i++) {
+        botonesEstado[i].addEventListener('click', function() {
+          // Obtiene el atributo "data-reserva" del botón clicado
+          var reservaId = this.getAttribute('data-reserva');
+    
+          // Muestra el formulario y realiza cualquier acción adicional necesaria
+          formularioReserva.style.display = 'block';
+          // Puedes hacer algo con el ID de reserva, como cargar los detalles de la reserva correspondiente en el formulario
+        });
+      }
+      
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>

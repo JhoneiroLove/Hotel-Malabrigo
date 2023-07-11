@@ -4,25 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Jhoel Maqui">
-  <meta name="description" content="Recuperar contraseña">
+  <meta name="copyright" content="Jhoel Maqui"/>
+  <meta name="description" content="Gestionar servicios adicionales">
   <meta name="keywords" content="Reserva hotel">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-    crossorigin="anonymous">
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href=".css">
-  <link rel="icon" type="image/x-icon" href="img/hotel.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="icon" type="image/x-icon" href="img/logohotel.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap"
-    rel="stylesheet">
-  <title>Principal Recepcionista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+  <title>Gestionar servicios </title>
 </head>
 
 <body>
@@ -34,175 +27,292 @@
             <span class="fs-5 d-none d-sm-inline">Menu</span>
           </a>
           <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+
             <li class="nav-item">
-              <a
-                href="Check-in.html"
-                class="nav-link align-middle px-0"
-                id="user-link"
-                data-toggle="modal"
+              <a href="Check-in.html" class="nav-link align-middle px-0" id="user-link" data-toggle="modal"
                 data-target="#userModal">
-                <i class="fs-4 bi-people"></i>
-                <span class="ms-1 d-none d-sm-inline">Check-in</span>
+                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Check-in</span>
               </a>
+
             </li>
             <li class="nav-item">
               <a href="Check-out.html" class="nav-link px-0 align-middle">
-                <i class="fs-4 bi-gear"></i>
-                <span class="ms-1 d-none d-sm-inline">Check-out</span>
+                <i class="fs-4 bi-gear"></i> <span class="ms-1 d-none d-sm-inline">Check-out</span>
               </a>
             </li>
             <li class="nav-item">
-              <a
-                href="gestServicios.html"
-                class="nav-link align-middle px-0"
-                id="user-link"
-                data-toggle="modal"
+              <a href="gestServicios.html" class="nav-link align-middle px-0" id="user-link" data-toggle="modal"
                 data-target="#userModal">
-                <i class="fs-4 bi-people"></i>
-                <span class="ms-1 d-none d-sm-inline">Gestionar servicios adicionales</span>
+                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Gestionar servicios
+                  adicionales</span>
               </a>
+
             </li>
             <li class="nav-item">
-              <a
-                href="adHabitaciones.html"
-                class="nav-link align-middle px-0"
-                id="user-link"
-                data-toggle="modal"
+              <a href="adHabitaciones.html" class="nav-link align-middle px-0" id="user-link" data-toggle="modal"
                 data-target="#userModal">
-                <i class="fs-4 bi-people"></i>
-                <span class="ms-1 d-none d-sm-inline">Administrar habitaciones</span>
+                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Administrar habitaciones</span>
               </a>
+
             </li>
           </ul>
           <hr>
+
         </div>
       </div>
-      <div id="content-container" class="col py-3">
-        <h2 class="text-center">Gestion de servicios adicionales</h2>
-        <div class="container">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Cliente</th>
-                <th scope="col">DNI</th>
-                <th scope="col">Servicios</th>
-                <th scope="col">Modificar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Cliente 1</td>
-                <td>DNI 12345678</td>
-                <td>
-                  <span>Servicio 1</span>
-                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
-                  <br>
-                  <span>Servicio 2</span>
-                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
-                  <br>
-                  <span>Servicio 3</span>
-                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
-                </td>
-                <td>
-                  <button class="btn btn-primary" data-toggle="modal" data-target="#editServiceModal"
-                    data-service-id="1">Modificar</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Cliente 2</td>
-                <td>DNI 87654321</td>
-                <td>
-                  <span>Servicio 1</span>
-                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
-                  <br>
-                  <span>Servicio 2</span>
-                  <button class="btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
-                </td>
-                <td>
-                  <button class="btn btn-primary" data-toggle="modal" data-target="#editServiceModal"
-                    data-service-id="2">Modificar</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Cliente 3</td>
-                <td>DNI 87654321</td>
-                <td>
-                  <span>Servicio 1</span>
-                  <button class="mb-1 btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
-                  <br>
-                  <span>Servicio 2</span>
-                  <button class="btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
-                </td>
-                <td>
-                  <button class="btn btn-primary" data-toggle="modal" data-target="#editServiceModal"
-                    data-service-id="3">Modificar</button>
-                </td>
-              </tr>
-              <!-- Agrega más filas según sea necesario -->
-            </tbody>
-          </table>
-          
-        </div>
-        <button type="button" class="col-12 btn btn-primary">Guardar</button>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-10 form-container">
+            <div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box">
+
+              <h1 class="mt-4">Gestionar servicios adicionales</h1>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <form>
+                      <div class="input-group mb-3">
+                        <input type="text" class=" form-control" placeholder="Buscar por documento"
+                          aria-label="Buscar cliente" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="submit" id="button-addon2">Buscar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="mb-3 ">Reserva</h4>
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+
+                  <div class="col-md-7 col-lg-12">
+
+                    <form class="needs-validation" novalidate>
+                      <div class="row g-3">
+
+                        <div class="col-sm-6">
+                          <label for="firstName" class="form-label">Dni</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="" value="75865448"
+                            required>
+                          <div class="invalid-feedback">
+                            El dni es requerido
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <label for="firstName" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="" value="Maqui" required>
+                          <div class="invalid-feedback">
+                            El nombre es requerido
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <label for="lastName" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="" value="Cruzado" required>
+                          <div class="invalid-feedback">
+                            El apellido es requerido
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <label for="lastName" class="form-label">Tipo habitacion</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="" value="Individual"
+                            required>
+                          <div class="invalid-feedback">
+                            El tipo de habitacion es requerido
+                          </div>
+                        </div>
+
+                        <div class="container mt-3">
+                          <div class="row">
+
+
+                            <div class="col-12 mb-3">
+                              <div class="">
+                                <label for="telefono" class="form-label">Telefono</label>
+                                <input type="telefono" class="form-control" id="telefono" name="telefono"
+                                  value="95873548">
+                              </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                    </form>
+                    <!-- Agrega los enlaces de Bootstrap CSS y JS en el encabezado de tu página -->
+
+<!-- Agrega los enlaces de Bootstrap CSS y JS en el encabezado de tu página -->
+
+<div class="">
+  <label class="form-label">
+    <h4>Servicios del cliente</h4>
+  </label>
+  <div class="input-group mb-3">
+    <select class="form-select" id="servicioSelect">
+      <option value="">Seleccionar servicio...</option>
+      <option value="Limpieza">Limpieza</option>
+      <option value="Desayuno">Desayuno</option>
+      <option value="Internet">Internet</option>
+      <option value="Gimnasio">Gimnasio</option>
+    </select>
+    <button type="button" class="btn btn-primary" id="agregarServicio">Agregar</button>
+  </div>
+</div>
+
+<table id="tablaServicios" class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Servicio</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Limpieza</td>
+      <td>
+        <button type="button" class="btn btn-danger eliminarServicio" data-bs-toggle="modal" data-bs-target="#confirmModal">Eliminar</button>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Desayuno</td>
+      <td>
+        <button type="button" class="btn btn-danger eliminarServicio" data-bs-toggle="modal" data-bs-target="#confirmModal">Eliminar</button>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Internet</td>
+      <td>
+        <button type="button" class="btn btn-danger eliminarServicio" data-bs-toggle="modal" data-bs-target="#confirmModal">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal de confirmación -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmModalLabel">Confirmar eliminación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de que deseas eliminar este servicio?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="eliminarConfirmado">Aceptar</button>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Ventana modal para editar servicio -->
-  <div class="modal fade" id="editServiceModal" tabindex="-1" role="dialog" aria-labelledby="editServiceModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="editServiceModalLabel">Editar Servicio</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="serviceName">Nombre del servicio</label>
-              <input type="text" class="form-control" id="serviceName">
-            </div>
-            <div class="form-group">
-              <label for="serviceDescription">Descripción</label>
-              <textarea class="form-control" id="serviceDescription" rows="3"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Guardar cambios</button>
-        </div>
-      </div>
-      
-    </div>
-    
-  </div>
+<button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+<script>
+  // Obtener referencias a los elementos relevantes
+var servicioSelect = document.getElementById('servicioSelect');
+var agregarServicioBtn = document.getElementById('agregarServicio');
+var tablaServicios = document.getElementById('tablaServicios').getElementsByTagName('tbody')[0];
+var eliminarConfirmadoBtn = document.getElementById('eliminarConfirmado');
+var servicios = []; // Array para almacenar los servicios agregados
+
+// Manejar el evento de clic en el botón "Agregar"
+agregarServicioBtn.addEventListener('click', function() {
+  // Obtener el valor seleccionado del select
+  var servicioSeleccionado = servicioSelect.value;
+
+  // Verificar si se ha seleccionado un servicio
+  if (servicioSeleccionado !== '') {
+    // Crear una nueva fila en la tabla
+    var fila = tablaServicios.insertRow();
+
+    // Agregar celdas a la fila
+    var celdaNumero = fila.insertCell(0);
+    var celdaServicio = fila.insertCell(1);
+    var celdaEliminar = fila.insertCell(2);
+
+    // Establecer el contenido de las celdas
+    celdaNumero.innerHTML = tablaServicios.rows.length; // Usar la longitud de las filas como número de servicio
+    celdaServicio.innerHTML = servicioSeleccionado;
+    celdaEliminar.innerHTML = '<button type="button" class="btn btn-danger eliminarServicio" data-bs-toggle="modal" data-bs-target="#confirmModal">Eliminar</button>';
+
+    // Guardar el servicio agregado en el array
+    servicios.push({
+      fila: fila,
+      servicio: servicioSeleccionado
+    });
+
+    // Reiniciar el select
+    servicioSelect.value = '';
+  }
+});
+
+// Manejar el evento de clic en el botón "Eliminar" dentro del modal de confirmación
+eliminarConfirmadoBtn.addEventListener('click', function() {
+  // Obtener la fila correspondiente al servicio a eliminar
+  var filaIndex = this.getAttribute('data-fila-index');
+  var filaEliminar = tablaServicios.rows[filaIndex];
+
+  // Eliminar la fila
+  tablaServicios.removeChild(filaEliminar);
+
+  // Eliminar el servicio correspondiente del array
+  servicios.splice(filaIndex, 1);
+
+  // Actualizar los números de las filas restantes
+  for (var i = 0; i < servicios.length; i++) {
+    servicios[i].fila.cells[0].innerHTML = i + 1;
+  }
+
+  // Cerrar el modal
+  var modal = document.getElementById('confirmModal');
+  var modalInstance = bootstrap.Modal.getInstance(modal);
+  modalInstance.hide();
+});
+
+// Manejar el evento de clic en el botón "Eliminar" dentro de cada fila
+tablaServicios.addEventListener('click', function(event) {
+  if (event.target.classList.contains('eliminarServicio')) {
+    var fila = event.target.closest('tr');
+    var filaIndex = fila.rowIndex - 1;
+    eliminarConfirmadoBtn.setAttribute('data-fila-index', filaIndex);
+  }
+});
+
+// Limpiar el modal al cerrarlo
+var modal = document.getElementById('confirmModal');
+modal.addEventListener('hidden.bs.modal', function () {
+  eliminarConfirmadoBtn.removeAttribute('data-fila-index');
+});
+</script>
+
+
+
+
+                    
+                    
+
+                    
+
+                  </div>
+
+                </div>
+            </div>
+          </div>
+
+
+
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-  <script>
-    // Obtener el botón "Modificar" y el campo "Nombre del servicio" del modal
-    var editServiceButtons = document.querySelectorAll('button[data-target="#editServiceModal"]');
-    var serviceNameField = document.getElementById('serviceName');
-
-    // Agregar un evento click a cada botón "Modificar" para actualizar el campo "Nombre del servicio" con el texto correspondiente
-    editServiceButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        var serviceId = button.getAttribute('data-service-id');
-        var serviceSpan = document.querySelector('tr[data-service-id="' + serviceId + '"] span');
-        var serviceName = serviceSpan.textContent;
-        serviceNameField.value = serviceName;
-      });
-    });
-  </script>
 </body>
 
 </html>

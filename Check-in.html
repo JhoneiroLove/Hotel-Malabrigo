@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Jhoel Maqui">
-  <meta name="description" content="Recuperar contraseña">
-  <meta name="keywords" content="Reserva hotel">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href=".css">
-  <link rel="icon" type="image/x-icon" href="img/hotel.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
-  <title>Principal Recepcionista</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jhoel Maqui">
+    <meta name="copyright" content="Jhoel Maqui"/>
+    <meta name="description" content="Check-in">
+    <meta name="keywords" content="Reserva hotel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="img/logohotel.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <title>Check-in</title>
 </head>
 
 <body>
@@ -66,14 +65,14 @@
           <div class="col-lg-12 col-md-10 form-container">
             <div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box">
 
-              <h1>Hotel malabrigo - Check-in</h1>
+              <h1 class="">Hotel malabrigo - Check-in</h1>
 
               <div class="container">
                 <div class="row">
                   <div class="col">
                     <form>
                       <div class="input-group mb-3">
-                        <input type="text" class=" form-control" placeholder="Buscar DNI" aria-label="Buscar cliente"
+                        <input type="text" class=" form-control" placeholder="Buscar por documento" aria-label="Buscar cliente"
                           aria-describedby="button-addon2">
                         <button class="btn btn-primary" type="submit" id="button-addon2">Buscar</button>
                       </div>
@@ -82,120 +81,96 @@
                 </div>
               </div>
 
-              <h4 class="mb-3 ">Dirección de Envio</h4>
+              <h4 class="mb-3 ">Reserva</h4>
               <form class="needs-validation" novalidate>
                 <div class="row g-3">
 
-                  <div class="col-sm-12">
-                    <label for="firstName" class="form-label">Dni</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      El dni es requerido
-                    </div>
+                  <div class="col-md-7 col-lg-12">
+                  
+                    <form class="needs-validation" novalidate>
+                      <div class="row g-3">
+          
+                        <div class="col-sm-6">
+                          <label for="firstName" class="form-label">Dni</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="" value="75865448" required>
+                          <div class="invalid-feedback">
+                            El dni es requerido
+                          </div>
+                        </div>
+          
+                        <div class="col-sm-6">
+                          <label for="firstName" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="" value="Maqui" required>
+                          <div class="invalid-feedback">
+                            El nombre es requerido
+                          </div>
+                        </div>
+            
+                        <div class="col-sm-6">
+                          <label for="lastName" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="" value="Cruzado" required>
+                          <div class="invalid-feedback">
+                            El apellido es requerido
+                          </div>
+                        </div>
+          
+                        <div class="col-sm-6">
+                          <label for="lastName" class="form-label">Tipo habitacion</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="" value="Individual" required>
+                          <div class="invalid-feedback">
+                            El tipo de habitacion es requerido
+                          </div>
+                        </div>
+            
+                        <div class="container mt-3">
+                          <div class="row">
+                            <div class="col ">
+                              <div class="row mb-3 ">
+                                <div class="col ">
+                                  <label for="fechaReserva" class="form-label">Fecha de entrada</label>
+                                  <input type="date" class="form-control" id="fechaReserva" name="fechaReserva" value="10/5/2023" required>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="mb-3">
+                                <label for="fechaEntrada" class="form-label">Fecha de salida</label>
+                                <input type="date" class="form-control" id="fechaEntrada" name="fechaEntrada" value="10/10/2023" required>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="">
+                                <label for="telefono" class="form-label">Telefono</label>
+                                <input type="telefono" class="form-control" id="telefono" name="telefono" value="95873548">
+                              </div>
+                          </div>
+                          <div class="col-4 my-2">
+                            <label for="fechaReserva" class="form-label">Registrar check-in</label>
+                            <input type="date" class="form-control" id="fechaReserva" name="fechaReserva" value="10/5/2023" required>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                      <h4 class="mb-3">Pago</h4>
+          
+                      <div class="mb-3 row">
+                        <label for="nombre" class="col-sm-3 col-form-label">Seleccionar tipo de pago</label>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>...</option>
+                              <option value="1">Tarjeta</option>
+                              <option value="2">Efectivo</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formularioFlotante">
+                            Pagar
+                          </button>
+                        </div>
+                      </div>  
                   </div>
-
-                  <div class="col-sm-6">
-                    <label for="firstName" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      El nombre es requerido
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6">
-                    <label for="lastName" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      El apellido es requerido
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6">
-                    <label for="lastName" class="form-label">Tipo habitacion</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      El tipo de habitacion es requerido
-                    </div>
-                  </div>
-
-
-                  <div class="col-6">
-                    <label for="email" class="form-label">Email <span
-                        class="text-body-secondary">(Opcional)</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="tu@dominio.com">
-                    <div class="invalid-feedback">
-                      Por favor, ingresa una dirección de correo electrónico válida para recibir actualizaciones de
-                      envío.
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="address2" class="form-label">Direccion <span
-                        class="text-body-secondary">(Opcional)</span></label>
-                    <input type="text" class="form-control" id="address2" placeholder="Departamento o suite">
-                  </div>
-
-                  <div class="col-12">
-                    <label for="checkinTime" class="form-label">Hora de Check-in</label>
-                    <input type="time" class="form-control" id="checkinTime" required>
-                    <div class="invalid-feedback">
-                      Por favor, ingresa la hora de check-in.
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="numGuests" class="form-label">Número de Huéspedes</label>
-                    <input type="number" class="form-control" id="numGuests" min="1" required>
-                    <div class="invalid-feedback">
-                      Por favor, ingresa el número de huéspedes.
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="specialRequests" class="form-label">Solicitudes Especiales</label>
-                    <textarea class="form-control" id="specialRequests" rows="3"></textarea>
-                  </div>
-
-                  <hr class="my-4">
-
-                  <div class="col-12">
-                    <label for="fechaReserva" class="form-label">Fecha de reserva</label>
-                    <input type="date" class="form-control" id="fechaReserva" required>
-                    <div class="invalid-feedback">
-                      Por favor, ingresa la fecha de reserva.
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="fechaEntrada" class="form-label">Fecha de entrada</label>
-                    <input type="date" class="form-control" id="fechaEntrada" required>
-                    <div class="invalid-feedback">
-                      Por favor, ingresa la fecha de entrada a la habitación.
-                    </div>
-                  </div>
-
-                <hr class="my-4">
-
-                <h4 class="mb-3">Pago</h4>
-
-                <div class="mb-3 row">
-                  <label for="nombre" class="col-sm-3 col-form-label">Seleccionar tipo de pago</label>
-                  <div class="col-sm-6">
-                    <div class="input-group">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>...</option>
-                        <option value="1">Tarjeta</option>
-                        <option value="2">Efectivo</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                      data-bs-target="#formularioFlotante">
-                      Pagar
-                    </button>
-                  </div>
-                </div>
 
                 <!-- Modal: Formulario de "Registrar pago con tarjeta" -->
                 <div class="modal fade" id="formularioFlotante" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -228,6 +203,17 @@
                             <label for="codigo" class="form-label">Código de seguridad (cvv)</label>
                             <input type="text" class="form-control" id="codigo" name="codigo"
                               placeholder="Código de seguridad" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="banco" class="form-label">Banco</label>
+                            <select class="form-select" id="banco" name="banco" required>
+                              <option value="">Seleccione un banco</option>
+                              <option value="BCP">BCP</option>
+                              <option value="BBVA">BBVA</option>
+                              <option value="Interbank">Interbank</option>
+                              <option value="Scotiabank">Scotiabank</option>
+                              <option value="Banco de la Nación">Banco de la Nación</option>
+                            </select>
                           </div>
                           <div class="mb-3">
                             <label for="tipo" class="form-label">Tipo de tarjeta</label>
@@ -273,17 +259,12 @@
                 </footer>
             </div>
             </form>
-
-
-
-
-
           </div>
-
         </div>
       </div>
     </div>
-
+  </div>
+  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

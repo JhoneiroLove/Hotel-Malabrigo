@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Jhoel Maqui">
-    <meta name="description" content="Recuperar contraseña">
+    <meta name="copyright" content="Jhoel Maqui">
+    <meta name="description" content="Administrar Hoteles">
     <meta name="keywords" content="Reserva hotel">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="img/hotel.jpg">
+    <link rel="icon" type="image/x-icon" href="img/logohotel.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
@@ -29,14 +29,12 @@
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
-                       
                         <li class="nav-item">
                             <a href="usuarios.html" class="nav-link align-middle px-0" id="user-link"
                                 data-toggle="modal" data-target="#userModal">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Usuarios del
                                     sistema</span>
                             </a>
-
                         </li>
                         <li class="nav-item">
                             <a href="servicios.html" class="nav-link px-0 align-middle">
@@ -48,7 +46,6 @@
                                 data-target="#userModal">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Hoteles</span>
                             </a>
-
                         </li>
                     </ul>
                     <hr>
@@ -66,201 +63,94 @@
 
                     <table class="table table-striped text-center">
                         <thead>
-                            <tr>
+                            <tr class="text-center">
                                 <th>#</th>
-                                <th>Descripción</th>
                                 <th>Nombre</th>
                                 <th>Dirección</th>
                                 <th>Teléfono</th>
                                 <th>Correo</th>
-                                <th>Estrellas</th>
                                 <th>Precio</th>
                                 <th>N° Habitaciones</th>
-                                <th>Estado</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Descripción 1</td>
-                                <td>Nombre Hotel 1</td>
-                                <td>Dirección 1</td>
-                                <td>Teléfono 1</td>
-                                <td>Correo 1</td>
-                                <td>5</td>
-                                <td>$100</td>
-                                <td>10</td>
-                                <td>Disponible</td>
-                                <td>
-                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
-                                        <i class="bi bi-pencil"></i> Editar
-                                    </button>
-                                    <button type="button" class=" mb-1 col-8 btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i> Eliminar
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Descripción 2</td>
-                                <td>Nombre Hotel 2</td>
-                                <td>Dirección 2</td>
-                                <td>Teléfono 2</td>
-                                <td>Correo 2</td>
-                                <td>4</td>
-                                <td>$80</td>
-                                <td>20</td>
-                                <td>Disponible</td>
-                                <td>
-                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
-                                        <i class="bi bi-pencil"></i> Editar
-                                    </button>
-                                    <button type="button" class="mb-1 col-8 btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i> Eliminar
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Descripción 2</td>
-                                <td>Nombre Hotel 2</td>
-                                <td>Dirección 2</td>
-                                <td>Teléfono 2</td>
-                                <td>Correo 2</td>
-                                <td>4</td>
-                                <td>$80</td>
-                                <td>20</td>
-                                <td>Disponible</td>
-                                <td>
-                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
-                                        <i class="bi bi-pencil"></i> Editar
-                                    </button>
-                                    <button type="button" class="mb-1 col-8 btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i> Eliminar
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Descripción 2</td>
-                                <td>Nombre Hotel 2</td>
-                                <td>Dirección 2</td>
-                                <td>Teléfono 2</td>
-                                <td>Correo 2</td>
-                                <td>4</td>
-                                <td>$80</td>
-                                <td>20</td>
-                                <td>Disponible</td>
-                                <td>
-                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
-                                        <i class="bi bi-pencil"></i> Editar
-                                    </button>
-                                    <button type="button" class="mb-1 col-8 btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i> Eliminar
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Descripción 2</td>
-                                <td>Nombre Hotel 2</td>
-                                <td>Dirección 2</td>
-                                <td>Teléfono 2</td>
-                                <td>Correo 2</td>
-                                <td>4</td>
-                                <td>$80</td>
-                                <td>20</td>
-                                <td>Disponible</td>
-                                <td>
-                                    <button type="button" class="mb-1 col-8 btn btn-primary btn-sm">
-                                        <i class="bi bi-pencil"></i> Editar
-                                    </button>
-                                    <button type="button" class="mb-1 col-8 btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i> Eliminar
-                                    </button>
-                                </td>
-                            </tr>
+                        <tbody id="hotelTabla">
                             <!-- Agrega más filas según sea necesario -->
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="9"> 
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#agregarHotelModal">Agregar Nuevo Hotel</button>  
+                                            </div>
+                                            <div class="col text-center">
+                                                <button class="btn btn-success" data-bs-toggle="modal">Guardar
+                                                cambios</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
                     </table>
-                    </table>
-                    <tfoot>
-                        <tr>
-                            <td colspan="7">
-                                <button class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#agregarHotelModal">Agregar Nuevo Hotel</button>
-                            </td>
-                        </tr>
-                    </tfoot>
                 </div>
 
                 <!-- Modal Agregar hotel -->
-                <div class="modal fade" id="agregarHotelModal" tabindex="-1" aria-labelledby="agregarHotelModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="agregarHotelModal" tabindex="-1" 
+                    aria-labelledby="agregarHotelModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="agregarHotelModalLabel">Agregar Nuevo Usuario</h5>
+                                <h5 class="modal-title" id="agregarHotelModalLabel">Agregar Nuevo Hotel</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Cerrar"></button>
                             </div>
                             <div class="modal-body">
-                                <form>
-                                    <form action="modificarHotel.php" method="POST" class="p-4">
+                                    <form>
                                         <div class="mb-3 row">
-                                            <label for="nombre" class="col-sm-3 col-form-label">Nombre</label>
+                                            <label for="nombreInput" class="col-sm-3 col-form-label">Nombre</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del hotel" required>
+                                                <input type="text" class="form-control" id="nombreInput" name="nombre" placeholder="Nombre del hotel" required>
                                             </div>
                                         </div>                        
                                         <div class="mb-3 row align-items-center">
-                                            <label for="direccion" class="col-sm-3 col-form-label">Dirección</label>
+                                            <label for="direccionInput" class="col-sm-3 col-form-label">Dirección</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección del hotel" required>
+                                                <input type="text" class="form-control" id="direccionInput" name="direccion" placeholder="Dirección del hotel" required>
                                             </div>
                                         </div>                        
                                         <div class="mb-3 row align-items-center">
-                                            <label for="telefono" class="col-sm-3 col-form-label">Teléfono</label>
+                                            <label for="telefonoInput" class="col-sm-3 col-form-label">Teléfono</label>
                                             <div class="col-sm-9">
                                                 <div class="input-group">
-                                                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="12345-6789" pattern="[0-9]{5}-[0-9]{4}" required>
+                                                    <input type="tel" class="form-control" id="telefonoInput" name="telefono" placeholder="12345-6789" pattern="[0-9]{5}-[0-9]{4}" required>
                                                 </div>
                                             </div>
                                         </div>                                              
                                         <div class="mb-3 row align-items-center">
-                                            <label for="correo" class="col-sm-3 col-form-label">Correo</label>
+                                            <label for="correoInput" class="col-sm-3 col-form-label">Correo</label>
                                             <div class="col-sm-9">
                                                 <div class="input-group">
-                                                    <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@dominio.com" required>
+                                                    <input type="email" class="form-control" id="correoInput" name="correo" placeholder="nombre@dominio.com" required>
                                                 </div>
                                             </div>
-                                        </div>                        
+                                        </div>                                             
                                         <div class="mb-3 row align-items-center">
-                                            <label for="estrellas" class="col-sm-3 col-form-label">Estrellas</label>
-                                            <div class="col-sm-9">
-                                                <input type="number" class="form-control" id="estrellas" name="estrellas" placeholder="Estrellas del hotel" required>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row align-items-start">
-                                            <label for="descripcion" class="col-sm-3 col-form-label">Descripción</label>
-                                            <div class="col-sm-9">
-                                                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Descripción del hotel" required></textarea>
-                                            </div>
-                                        </div>                        
-                                        <div class="mb-3 row align-items-center">
-                                            <label for="precio" class="col-sm-3 col-form-label">Precio por noche</label>
+                                            <label for="precioInput" class="col-sm-3 col-form-label">Precio por noche</label>
                                             <div class="col-sm-9">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" id="precio" name="precio" placeholder="Precio por noche" required>
+                                                    <input type="text" class="form-control" id="precioInput" name="precio" placeholder="Precio por noche" required>
                                                     <span class="input-group-text">PEN</span>
                                                 </div>
                                             </div>
                                         </div>                        
                                         <div class="mb-3 row align-items-center">
-                                            <label for="habitaciones" class="col-sm-3 col-form-label">Cantidad de habitaciones</label>
+                                            <label for="numeroInput" class="col-sm-3 col-form-label">Cantidad de habitaciones</label>
                                             <div class="col-sm-9">
-                                                <input type="number" class="form-control" id="habitaciones" name="habitaciones" placeholder="Cantidad de habitaciones" required>
+                                                <input type="number" class="form-control" id="numeroInput" name="habitaciones" placeholder="Cantidad de habitaciones" required>
                                             </div>
                                         </div>
                                         <div class="mb-3 row align-items-center">
@@ -279,76 +169,112 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>                        
-                                        <div class="d-flex justify-content-center mt-3">
-                                            <button class="btn btn-danger me-5" type="button">Guardar cambios</button>
-                                            <button class="btn btn-secondary" type="button">Cancelar</button>
-                                        </div>
-                                    </form>
+                                        </div>  
+                                    </form>    
+                            </div>                  
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-primary"
+                                        onclick="agregarHotel()">Guardar cambios</button>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
                 </div>
-
-                <!-- Modal Eliminar Usuario -->
-                <div class="modal fade" id="eliminarUsuarioModal" tabindex="-1"
-                    aria-labelledby="eliminarUsuarioModalLabel" aria-hidden="true">
+                <!-- Modal Eliminar hotel -->
+                <div class="modal fade" id="eliminarHotelModal" tabindex="-1"
+                    aria-labelledby="eliminarHotelModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="eliminarUsuarioModalLabel">Eliminar Usuario</h5>
+                                <h5 class="modal-title" id="eliminarHotelModalLabel">Eliminar Hotel</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Cerrar"></button>
                             </div>
                             <div class="modal-body">
-                                <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                                <p>¿Estás seguro de que deseas eliminar este hotel?</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary"
                                     data-bs-dismiss="modal">Cancelar</button>
                                 <button type="button" class="btn btn-danger"
-                                    id="confirmarEliminarUsuario">Eliminar</button>
+                                    id="confirmarEliminarHotel">Eliminar</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Modal Editar Usuario -->
+                <!-- Modal Editar Hotel -->
                 <div class="modal fade" id="editarHotelModal" tabindex="-1" aria-labelledby="editarHotelModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="editarHotelModalLabel">Editar Usuario</h5>
+                                <h5 class="modal-title" id="editarHotelModalLabel">Editar Hotel</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Cerrar"></button>
                             </div>
                             <div class="modal-body">
                                 <form>
-                                    <div class="mb-3">
-                                        <label for="editarNombreInput" class="form-label">Nombre de hotel</label>
-                                        <input type="text" class="form-control" id="editarNombreInput"
-                                            placeholder="Ingrese el nombre de Hotel">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="editarUbicacionInput" class="form-label">Ubicacion</label>
-                                        <input type="text" class="form-control" id="editarUbicacionInput"
-                                            placeholder="Ubicacion">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="editarCantidadInput" class="form-label">Cantidad de
-                                            habitaciones</label>
-                                            <div class="mb-3">
-                                                <label for="editarCantidadInput" class="form-label">Ubicacion</label>
-                                                <input type="text" class="form-control" id="editarCantidadInput"
-                                                    placeholder="Cantidad">
+                                    <div class="mb-3 row">
+                                        <label for="editarNombreInput" class="col-sm-3 col-form-label">Nombre</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="editarNombreInput" name="nombre" placeholder="Nombre del hotel" required>
+                                        </div>
+                                    </div>                        
+                                    <div class="mb-3 row align-items-center">
+                                        <label for="editarDireccionInput" class="col-sm-3 col-form-label">Dirección</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="editarDireccionInput" name="direccion" placeholder="Dirección del hotel" required>
+                                        </div>
+                                    </div>                        
+                                    <div class="mb-3 row align-items-center">
+                                        <label for="editarTelefonoInput" class="col-sm-3 col-form-label">Teléfono</label>
+                                        <div class="col-sm-9">
+                                            <div class="input-group">
+                                                <input type="tel" class="form-control" id="editarTelefonoInput" name="telefono" placeholder="12345-6789" pattern="[0-9]{5}-[0-9]{4}" required>
                                             </div>
+                                        </div>
+                                    </div>                                              
+                                    <div class="mb-3 row align-items-center">
+                                        <label for="editarCorreoInput" class="col-sm-3 col-form-label">Correo</label>
+                                        <div class="col-sm-9">
+                                            <div class="input-group">
+                                                <input type="email" class="form-control" id="editarCorreoInput" name="correo" placeholder="nombre@dominio.com" required>
+                                            </div>
+                                        </div>
+                                    </div>                                             
+                                    <div class="mb-3 row align-items-center">
+                                        <label for="editarPrecioInput" class="col-sm-3 col-form-label">Precio por noche</label>
+                                        <div class="col-sm-9">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="editarPrecioInput" name="precio" placeholder="Precio por noche" required>
+                                                <span class="input-group-text">PEN</span>
+                                            </div>
+                                        </div>
+                                    </div>                        
+                                    <div class="mb-3 row align-items-center">
+                                        <label for="editarNumeroInput" class="col-sm-3 col-form-label">Cantidad de habitaciones</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="editarNumeroInput" name="habitaciones" placeholder="Cantidad de habitaciones" required>
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="editarEstadoInput" class="form-label">Estado</label>
-                                        <select class="form-control" id="editarEstadoInput">
-                                            <option value="Activo">Activo</option>
-                                            <option value="Inactivo">Inactivo</option>
-                                        </select>
+                                    <div class="mb-3 row align-items-center">
+                                        <label for="imagen" class="col-sm-3 col-form-label">Imagen</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" class="form-control" id="imagen" name="imagen" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row align-items-start">
+                                        <label for="ubicacion" class="col-sm-3 col-form-label">Ubicación</label>
+                                        <div class="col-sm-9">
+                                            <div class="mapa-contenido">
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1660.663668656303!2d-79.0326063717926!3d-8.127311979758224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d6fc00e11a5%3A0xef538e1047aa1c9d!2sUniversidad%20Privada%20Antenor%20Orrego%2C%20Trujillo%2013008!5e0!3m2!1ses-419!2spe!4v1683423798228!5m2!1ses-419!2spe" 
+                                                    class="embed-responsive-item" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -360,6 +286,131 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+            <script>
+                // Función para eliminar un hotel
+                function eliminarHotel(botonEliminar) {
+                    var fila = botonEliminar.closest("tr"); // Obtener la fila a la que pertenece el botón
+                    var modal = new bootstrap.Modal(document.getElementById("eliminarHotelModal")); // Crear instancia del modal
+
+                    document.getElementById("confirmarEliminarHotel").addEventListener("click", function () {
+                        fila.remove(); // Eliminar la fila de la tabla
+                        modal.hide(); // Ocultar el modal de eliminación
+                    });
+
+                    modal.show(); // Mostrar el modal de eliminación
+                }
+
+                // Función para editar un hotel
+                function editarHotel(botonEditar) {
+                    var fila = botonEditar.closest("tr");
+                    var nombreHotel = fila.cells[1].textContent;
+                    var direccionHotel = fila.cells[2].textContent;
+                    var telefonoHotel = fila.cells[3].textContent;
+                    var correoHotel = fila.cells[4].textContent;
+                    var precioHotel = fila.cells[5].textContent;
+                    var numeroHotel = fila.cells[6].textContent;
+
+                    var modal = new bootstrap.Modal(document.getElementById("editarHotelModal"));
+
+                    document.getElementById("confirmarEditarHotel").addEventListener("click", function () {
+                        var nuevoNombre = document.getElementById("editarNombreInput").value;
+                        var nuevoDireccion = document.getElementById("editarDireccionInput").value;
+                        var nuevoTelefono = document.getElementById("editarTelefonoInput").value;
+                        var nuevoCorreo = document.getElementById("editarCorreoInput").value;
+                        var nuevoPrecio = document.getElementById("editarPrecioInput").value;
+                        var nuevoNumero = document.getElementById("editarNumeroInput").value;
+
+
+                        fila.cells[1].textContent = nuevoNombre;
+                        fila.cells[2].textContent = nuevoDireccion;
+                        fila.cells[3].textContent = nuevoTelefono;
+                        fila.cells[4].textContent = nuevoCorreo;
+                        fila.cells[5].textContent = nuevoPrecio;
+                        fila.cells[6].textContent = nuevoNumero;
+
+
+                        modal.hide();
+                    });
+                    document.getElementById("editarNombreInput").value = nombreHotel;
+                    document.getElementById("editarDireccionInput").value = direccionHotel;
+                    document.getElementById("editarTelefonoInput").value = telefonoHotel;
+                    document.getElementById("editarCorreoInput").value = correoHotel;
+                    document.getElementById("editarPrecioInput").value = precioHotel;
+                    document.getElementById("editarNumeroInput").value = numeroHotel;
+
+                    modal.show();
+                }
+
+                var contadorHoteles = 5; // Contador para asignar números de hotel
+
+                function agregarHotel() {
+                    // Obtener los valores ingresados en el formulario
+                    var nombre = document.getElementById("nombreInput").value;
+                    var direccion = document.getElementById("direccionInput").value;
+                    var telefono = document.getElementById("telefonoInput").value;
+
+                    var correo = document.getElementById("correoInput").value;
+                    var precio = document.getElementById("precioInput").value;
+                    
+                    var numero = document.getElementById("numeroInput").value;
+
+                    // Crear una nueva fila para el hotel
+                    var nuevaFila = document.createElement("tr");
+                    var numeroCelda = document.createElement("td");
+                    var nombreCelda = document.createElement("td");
+                    var direccionCelda = document.createElement("td");
+                    var telefonoCelda = document.createElement("td");
+                    var correoCelda = document.createElement("td");
+                    var precioCelda = document.createElement("td");
+
+                    var cantidaCelda = document.createElement("td");
+                    var accionesCelda = document.createElement("td");
+
+                    // Configurar el contenido de las celdas
+                    numeroCelda.textContent = ++contadorHoteles; // Incrementar el contador y asignar el número de usuario
+                    nombreCelda.textContent = nombre;
+                    direccionCelda.textContent = direccion;
+                    telefonoCelda.textContent = telefono;
+                    correoCelda.textContent = correo;
+                    precioCelda.textContent = precio;
+
+                    cantidaCelda.textContent = numero;
+                    accionesCelda.innerHTML =
+                        '<button class="btn btn-sm btn-primary" onclick="editarHotel(this)">Editar</button> ' +
+                        '<button class="btn btn-sm btn-danger" onclick="eliminarHotel(this)">Eliminar</button>';
+
+                    // Agregar las celdas a la nueva fila
+                    nuevaFila.appendChild(numeroCelda);
+                    nuevaFila.appendChild(nombreCelda);
+                    nuevaFila.appendChild(direccionCelda);
+                    nuevaFila.appendChild(telefonoCelda);
+                    nuevaFila.appendChild(correoCelda);
+
+                    nuevaFila.appendChild(precioCelda);
+                    nuevaFila.appendChild(cantidaCelda);
+                    nuevaFila.appendChild(accionesCelda);
+
+                    // Agregar la nueva fila a la tabla
+                    document.getElementById("hotelTabla").appendChild(nuevaFila);
+
+                    // Limpiar los campos del formulario
+                    document.getElementById("nombreInput").value = "";
+                    document.getElementById("direccionInput").value = "";
+                    document.getElementById("telefonoInput").value = "";
+                    document.getElementById("correoInput").value = "";
+                    document.getElementById("precioInput").value = "";
+                    document.getElementById("numeroInput").value = "";
+
+                    // Cerrar el modal de "Agregar hotel"
+                    var modal = bootstrap.Modal.getInstance(document.getElementById("agregarHotelModal"));
+                    modal.hide();
+                }
+                
+            </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
