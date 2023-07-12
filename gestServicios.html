@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Jhoel Maqui">
-  <meta name="copyright" content="Jhoel Maqui"/>
+  <meta name="copyright" content="Jhoel Maqui">
   <meta name="description" content="Gestionar servicios adicionales">
   <meta name="keywords" content="Reserva hotel">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
-  <title>Gestionar servicios </title>
+  <title>Gestionar servicios</title>
 </head>
 
 <body>
@@ -143,23 +143,45 @@
                     </form>
                     <!-- Agrega los enlaces de Bootstrap CSS y JS en el encabezado de tu página -->
 
-<!-- Agrega los enlaces de Bootstrap CSS y JS en el encabezado de tu página -->
+                    <button type="button" class="col-3 btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                      <h6 class="text-center">Agregar servicio</h6>
+                    </button>
+                  
+                    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="">
+                              <label class="form-label">
+                                <h4>Servicios del cliente</h4>
+                              </label>
+                              <div class="input-group mb-3">
+                                <select class="form-select" id="servicioSelect">
+                                  <option value="">Seleccionar servicio...</option>
+                                  <option value="Limpieza">Limpieza</option>
+                                  <option value="Desayuno">Desayuno</option>
+                                  <option value="Internet">Internet</option>
+                                  <option value="Gimnasio">Gimnasio</option>
+                                </select>
+                                <button type="button" class="btn btn-primary" id="agregarServicio">Agregar</button>
+                              </div>
+                            </div>
+                            <div id="mensajeExito" class="alert alert-success" style="display: none;">
+                              <p>Servicio agregado exitosamente.</p>
+                            </div>
+                          </div>
+                  
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
 
-<div class="">
-  <label class="form-label">
-    <h4>Servicios del cliente</h4>
-  </label>
-  <div class="input-group mb-3">
-    <select class="form-select" id="servicioSelect">
-      <option value="">Seleccionar servicio...</option>
-      <option value="Limpieza">Limpieza</option>
-      <option value="Desayuno">Desayuno</option>
-      <option value="Internet">Internet</option>
-      <option value="Gimnasio">Gimnasio</option>
-    </select>
-    <button type="button" class="btn btn-primary" id="agregarServicio">Agregar</button>
-  </div>
-</div>
 
 <table id="tablaServicios" class="table">
   <thead>
@@ -216,91 +238,54 @@
 <button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
 <script>
+  // Código JavaScript para agregar y eliminar servicios
+
   // Obtener referencias a los elementos relevantes
-var servicioSelect = document.getElementById('servicioSelect');
-var agregarServicioBtn = document.getElementById('agregarServicio');
-var tablaServicios = document.getElementById('tablaServicios').getElementsByTagName('tbody')[0];
-var eliminarConfirmadoBtn = document.getElementById('eliminarConfirmado');
-var servicios = []; // Array para almacenar los servicios agregados
+  var servicioSelect = document.getElementById('servicioSelect');
+  var agregarServicioBtn = document.getElementById('agregarServicio');
+  var tablaServicios = document.getElementById('tablaServicios').getElementsByTagName('tbody')[0];
+  var eliminarConfirmadoBtn = document.getElementById('eliminarConfirmado');
+  var servicios = []; // Array para almacenar los servicios agregados
 
-// Manejar el evento de clic en el botón "Agregar"
-agregarServicioBtn.addEventListener('click', function() {
-  // Obtener el valor seleccionado del select
-  var servicioSeleccionado = servicioSelect.value;
+  // Manejar el evento de clic en el botón "Agregar"
+  agregarServicioBtn.addEventListener('click', function() {
+    // Obtener el valor seleccionado del select
+    var servicioSeleccionado = servicioSelect.value;
 
-  // Verificar si se ha seleccionado un servicio
-  if (servicioSeleccionado !== '') {
-    // Crear una nueva fila en la tabla
-    var fila = tablaServicios.insertRow();
+    // Verificar si se ha seleccionado un servicio
+    if (servicioSeleccionado !== '') {
+      // Crear una nueva fila en la tabla
+      var fila = tablaServicios.insertRow();
 
-    // Agregar celdas a la fila
-    var celdaNumero = fila.insertCell(0);
-    var celdaServicio = fila.insertCell(1);
-    var celdaEliminar = fila.insertCell(2);
+      // Agregar celdas a la fila
+      var celdaNumero = fila.insertCell(0);
+      var celdaServicio = fila.insertCell(1);
+      var celdaEliminar = fila.insertCell(2);
 
-    // Establecer el contenido de las celdas
-    celdaNumero.innerHTML = tablaServicios.rows.length; // Usar la longitud de las filas como número de servicio
-    celdaServicio.innerHTML = servicioSeleccionado;
-    celdaEliminar.innerHTML = '<button type="button" class="btn btn-danger eliminarServicio" data-bs-toggle="modal" data-bs-target="#confirmModal">Eliminar</button>';
+      // Establecer el contenido de las celdas
+      celdaNumero.innerHTML = tablaServicios.rows.length; // Usar la longitud de las filas como número de servicio
+      celdaServicio.innerHTML = servicioSeleccionado;
+      celdaEliminar.innerHTML = '<button type="button" class="btn btn-danger eliminarServicio" data-bs-toggle="modal" data-bs-target="#confirmModal">Eliminar</button>';
 
-    // Guardar el servicio agregado en el array
-    servicios.push({
-      fila: fila,
-      servicio: servicioSeleccionado
-    });
+      // Guardar el servicio agregado en el array
+      servicios.push({
+        fila: fila,
+        servicio: servicioSeleccionado
+      });
 
-    // Reiniciar el select
-    servicioSelect.value = '';
-  }
-});
+      // Mostrar el mensaje de éxito
+      document.getElementById('mensajeExito').style.display = 'block';
 
-// Manejar el evento de clic en el botón "Eliminar" dentro del modal de confirmación
-eliminarConfirmadoBtn.addEventListener('click', function() {
-  // Obtener la fila correspondiente al servicio a eliminar
-  var filaIndex = this.getAttribute('data-fila-index');
-  var filaEliminar = tablaServicios.rows[filaIndex];
+      // Reiniciar el select
+      servicioSelect.value = '';
+    }
+  });
 
-  // Eliminar la fila
-  tablaServicios.removeChild(filaEliminar);
-
-  // Eliminar el servicio correspondiente del array
-  servicios.splice(filaIndex, 1);
-
-  // Actualizar los números de las filas restantes
-  for (var i = 0; i < servicios.length; i++) {
-    servicios[i].fila.cells[0].innerHTML = i + 1;
-  }
-
-  // Cerrar el modal
-  var modal = document.getElementById('confirmModal');
-  var modalInstance = bootstrap.Modal.getInstance(modal);
-  modalInstance.hide();
-});
-
-// Manejar el evento de clic en el botón "Eliminar" dentro de cada fila
-tablaServicios.addEventListener('click', function(event) {
-  if (event.target.classList.contains('eliminarServicio')) {
-    var fila = event.target.closest('tr');
-    var filaIndex = fila.rowIndex - 1;
-    eliminarConfirmadoBtn.setAttribute('data-fila-index', filaIndex);
-  }
-});
-
-// Limpiar el modal al cerrarlo
-var modal = document.getElementById('confirmModal');
-modal.addEventListener('hidden.bs.modal', function () {
-  eliminarConfirmadoBtn.removeAttribute('data-fila-index');
-});
+  // Ocultar el mensaje de éxito después de 2 segundos (2000 milisegundos)
+  setTimeout(function() {
+    document.getElementById('mensajeExito').style.display = 'none';
+  }, 2000);
 </script>
-
-
-
-
-                    
-                    
-
-                    
-
                   </div>
 
                 </div>
